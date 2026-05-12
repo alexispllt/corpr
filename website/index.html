@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpr — Institutional-Grade Financial Analysis on iOS</title>
+  <meta name="description" content="Corpr transforms your iPhone into a professional financial terminal. Analyze stocks with institutional-grade metrics, build portfolios, and master finance — all in one app.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav" id="navbar">
+    <a href="#" class="nav-logo">Corpr<span>.</span></a>
+    <div class="nav-links">
+      <a href="#deep-analysis">Analysis</a>
+      <a href="#learn-finance">Learn</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#social">Social</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#download" class="nav-cta">Download</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#deep-analysis" onclick="closeMobile()">Analysis</a>
+    <a href="#learn-finance" onclick="closeMobile()">Learn</a>
+    <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
+    <a href="#social" onclick="closeMobile()">Social</a>
+    <a href="#pricing" onclick="closeMobile()">Pricing</a>
+    <a href="#download" class="nav-cta" onclick="closeMobile()">Download</a>
+  </div>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="dot"></span> Now available on the App Store
+        </div>
+        <h1 class="hero-title">
+          From data to<br><span class="gradient">decisions.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Corpr transforms your iPhone into an institutional-grade financial terminal. Analyze any public company with professional metrics, AI-driven insights, and real-time data.
+        </p>
+        <div class="hero-buttons">
+          <a href="#download" class="btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download for iOS
+          </a>
+          <a href="#features" class="btn-secondary">
+            Explore Features →
+          </a>
+        </div>
+      </div>
+      <div class="hero-mockup">
+        <video autoplay loop muted playsinline id="heroVideo">
+          <source src="videomockup1.webm" type="video/webm">
+          <!-- Fallback image if video fails -->
+          <img src="images/mockup-home.png" alt="Corpr App Home Screen">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TICKER BAR ======== -->
+  <div class="ticker-bar">
+    <div class="ticker-track" id="tickerTrack">
+      <div class="ticker-item"><span class="name">AAPL</span><span class="price">$198.50</span><span class="change up">+2.34%</span></div>
+      <div class="ticker-item"><span class="name">MSFT</span><span class="price">$425.12</span><span class="change up">+1.87%</span></div>
+      <div class="ticker-item"><span class="name">NVDA</span><span class="price">$892.40</span><span class="change up">+4.12%</span></div>
+      <div class="ticker-item"><span class="name">GOOGL</span><span class="price">$176.88</span><span class="change down">-0.45%</span></div>
+      <div class="ticker-item"><span class="name">AMZN</span><span class="price">$185.62</span><span class="change up">+1.23%</span></div>
+      <div class="ticker-item"><span class="name">TSLA</span><span class="price">$248.90</span><span class="change down">-1.56%</span></div>
+      <div class="ticker-item"><span class="name">META</span><span class="price">$512.30</span><span class="change up">+3.01%</span></div>
+      <div class="ticker-item"><span class="name">JPM</span><span class="price">$198.75</span><span class="change up">+0.92%</span></div>
+      <!-- Duplicated for infinite scroll -->
+      <div class="ticker-item"><span class="name">AAPL</span><span class="price">$198.50</span><span class="change up">+2.34%</span></div>
+      <div class="ticker-item"><span class="name">MSFT</span><span class="price">$425.12</span><span class="change up">+1.87%</span></div>
+      <div class="ticker-item"><span class="name">NVDA</span><span class="price">$892.40</span><span class="change up">+4.12%</span></div>
+      <div class="ticker-item"><span class="name">GOOGL</span><span class="price">$176.88</span><span class="change down">-0.45%</span></div>
+      <div class="ticker-item"><span class="name">AMZN</span><span class="price">$185.62</span><span class="change up">+1.23%</span></div>
+      <div class="ticker-item"><span class="name">TSLA</span><span class="price">$248.90</span><span class="change down">-1.56%</span></div>
+      <div class="ticker-item"><span class="name">META</span><span class="price">$512.30</span><span class="change up">+3.01%</span></div>
+      <div class="ticker-item"><span class="name">JPM</span><span class="price">$198.75</span><span class="change up">+0.92%</span></div>
+    </div>
+  </div>
+
+  <!-- ======== FEATURES ======== -->
+  <div class="features-bg" id="features">
+    <div class="section section-center fade-up">
+
+      <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+      <p class="section-subtitle">Professional-grade tools designed for ambitious investors who refuse to settle for surface-level analysis.</p>
+
+    </div>
+  </div>
+
+  <!-- ======== SHOWCASE: ANALYSIS ======== -->
+  <section class="section" id="analysis">
+    <div class="showcase-row fade-up" id="deep-analysis">
+      <div class="showcase-text">
+
+        <h3>Institutional metrics,<br>in your pocket.</h3>
+        <p>Every company analysis includes a comprehensive breakdown across Valuation, Profitability, Financial Strength, and Growth — with sector-aware evaluation that adapts thresholds to industry standards.</p>
+        <div class="showcase-tags">
+          <span class="showcase-tag">P/E Ratio</span>
+          <span class="showcase-tag">PEG</span>
+          <span class="showcase-tag">EV/EBITDA</span>
+          <span class="showcase-tag">ROIC</span>
+          <span class="showcase-tag">Gross Margin</span>
+          <span class="showcase-tag">Net Debt/EBITDA</span>
+          <span class="showcase-tag">Revenue Growth</span>
+          <span class="showcase-tag">EPS Growth</span>
+        </div>
+      </div>
+      <div class="showcase-mockup">
+        <img src="images/Mockup1.png" alt="Company Analysis View with KPI metrics">
+      </div>
+    </div>
+
+    <div class="showcase-row reverse fade-up" id="learn-finance">
+      <div class="showcase-text">
+
+        <h3>Master investing,<br>one lesson at a time.</h3>
+        <p>Six comprehensive courses covering everything from Fundamental Metrics to Practical Investing. Each lesson features in-depth content written by finance professionals, with interactive quizzes to validate your understanding.</p>
+        <div class="showcase-tags">
+          <span class="showcase-tag">Valuation Basics</span>
+          <span class="showcase-tag">Investment Strategies</span>
+          <span class="showcase-tag">Risk Management</span>
+          <span class="showcase-tag">Sector Analysis</span>
+          <span class="showcase-tag">Practical Investing</span>
+        </div>
+      </div>
+      <div class="showcase-mockup">
+        <img src="images/Mockup2.png" alt="Learning courses with progress tracking">
+      </div>
+    </div>
+
+    <div class="showcase-row fade-up" id="portfolio">
+      <div class="showcase-text">
+
+        <h3>Track and optimize<br>your wealth.</h3>
+        <p>Create custom portfolios and get a unified view of your investments. Our system calculates weighted quality scores based on diversification, valuation, and growth metrics to help you make better allocation decisions.</p>
+      </div>
+      <div class="showcase-mockup">
+        <img src="images/Mockup3.png" alt="Smart Portfolios View">
+      </div>
+    </div>
+
+    <div class="showcase-row reverse fade-up" id="social">
+      <div class="showcase-text">
+
+        <h3>Learn from the<br>best.</h3>
+        <p>Connect with a community of ambitious investors. Share your portfolios, follow successful strategies, and discuss market trends with peers who speak your language.</p>
+      </div>
+      <div class="showcase-mockup">
+        <div style="width: 100%; height: 400px; background: rgba(255,255,255,0.03); border: 2px dashed rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #555; font-family: monospace;">
+          [Mockup Placeholder]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== STATS ======== -->
+  <div class="stats-section">
+    <div class="section fade-up">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-number" data-count="12">0</div>
+          <div class="stat-label">Dynamic KPI Metrics</div>
+        </div>
+        <div>
+          <div class="stat-number" data-count="60" data-suffix="+">0</div>
+          <div class="stat-label">Interactive Lessons</div>
+        </div>
+        <div>
+          <div class="stat-number" data-count="6">0</div>
+          <div class="stat-label">Complete Courses</div>
+        </div>
+        <div>
+          <div class="stat-number" data-count="50" data-suffix="K+">0</div>
+          <div class="stat-label">Companies Covered</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ======== TESTIMONIALS ======== -->
+  <div class="features-bg">
+    <div class="section section-center fade-up">
+
+      <h2 class="section-title">Trusted by ambitious investors.</h2>
+      <p class="section-subtitle">Join thousands of users who upgraded their investment analysis workflow.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Finally an app that doesn't dumb down financial analysis. The sector-calibrated KPIs are exactly what I needed for my portfolio decisions."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-name">Marc D.</div>
+              <div class="testimonial-role">Portfolio Manager</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"The learning courses transformed my understanding of valuation. I went from guessing to actually understanding what I'm buying."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">S</div>
+            <div>
+              <div class="testimonial-name">Sarah K.</div>
+              <div class="testimonial-role">Business Student</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Bloomberg-level data in an app that actually looks good. The AI analyst reviews save me hours of research every week."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">T</div>
+            <div>
+              <div class="testimonial-name">Thomas R.</div>
+              <div class="testimonial-role">Independent Investor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== PRICING ======== -->
+  <section class="section section-center" id="pricing">
+    <div class="fade-up">
+
+      <h2 class="section-title">Start free. Go unlimited.</h2>
+      <p class="section-subtitle">No hidden fees. No credit card required. Upgrade when you're ready for unlimited power.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">Free</div>
+          <div class="pricing-price">$0 <span>/month</span></div>
+          <div class="pricing-desc">Perfect to get started</div>
+          <ul class="pricing-features">
+            <li>5 company analyses per day</li>
+            <li>All 6 learning courses</li>
+            <li>Portfolio creation</li>
+            <li>Community profiles</li>
+            <li>Favorites tracking</li>
+          </ul>
+          <button class="pricing-btn secondary">Get Started Free</button>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-name">Premium</div>
+          <div class="pricing-price">$9.99 <span>/month</span></div>
+          <div class="pricing-desc">For serious investors</div>
+          <ul class="pricing-features">
+            <li>Unlimited company analyses</li>
+            <li>All 12 dynamic KPI metrics</li>
+            <li>Deep AI analyst insights</li>
+            <li>Advanced portfolio scoring</li>
+            <li>Priority data access</li>
+            <li>Early access to new features</li>
+          </ul>
+          <button class="pricing-btn primary">Upgrade to Premium</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CTA ======== -->
+  <section class="cta-section" id="download">
+    <div class="cta-glow"></div>
+    <h2>Ready to invest smarter?</h2>
+    <p>Download Corpr today and transform the way you analyze, learn, and invest.</p>
+    <a href="#" class="btn-primary">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      Download on the App Store
+    </a>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Corpr<span>.</span></h3>
+        <p>Institutional-grade financial analysis, education, and portfolio management — all in one beautifully designed iOS app.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#deep-analysis">Analysis</a>
+        <a href="#learn-finance">Learn</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#social">Social</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">Press Kit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Corpr. An app by Alexis Pollet.</span>
+      <span>Made with ❤️ for investors</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
