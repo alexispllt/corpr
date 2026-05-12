@@ -67,7 +67,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .nav-links a:hover { color: var(--text-primary); }
 .nav-cta {
   padding: 10px 24px; border-radius: 12px; font-size: 14px; font-weight: 700;
-  background: var(--primary); color: #fff;
+  background: var(--primary); color: #fff !important;
   transition: all 0.3s ease;
 }
 .nav-cta:hover { background: var(--primary-hover); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(10,132,255,0.3); }
@@ -132,15 +132,14 @@ button { cursor: pointer; border: none; font-family: inherit; }
 }
 .btn-secondary:hover { background: var(--bg-hover); color: var(--text-primary); border-color: var(--text-muted); }
 
-.hero-mockup { flex: 0 0 420px; position: relative; }
+.hero-mockup { flex: 0 0 650px; position: relative; }
 .hero-mockup video {
   width: 100%;
   animation: float 6s ease-in-out infinite;
   background: transparent;
 }
 .hero-mockup img {
-  width: 100%; border-radius: 32px;
-  box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 60px rgba(10,132,255,0.1);
+  width: 100%;
   animation: float 6s ease-in-out infinite;
 }
 @keyframes float {
@@ -218,7 +217,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 600;
   background: var(--bg-elevated); color: var(--text-muted); border: 1px solid var(--border-subtle);
 }
-.showcase-mockup { flex: 0 0 480px; }
+.showcase-mockup { flex: 0 0 580px; }
 .showcase-mockup img {
   width: 100%;
   transition: transform 0.5s ease;
