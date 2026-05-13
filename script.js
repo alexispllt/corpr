@@ -8,18 +8,19 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// ---- Mobile menu ----
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('active');
-});
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+}
 
 function closeMobile() {
-  mobileMenu.classList.remove('open');
-  hamburger.classList.remove('active');
+  if (mobileMenu) mobileMenu.classList.remove('open');
+  if (hamburger) hamburger.classList.remove('active');
 }
 
 // ---- Scroll fade-up animations ----
@@ -128,5 +129,28 @@ document.querySelectorAll('.course-card').forEach(card => {
   });
   card.addEventListener('mouseleave', () => {
     card.style.transform = 'perspective(600px) rotateY(0) rotateX(0) translateY(0)';
+  });
+});
+
+// ---- Navbar Scroll Spy ----
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (window.pageYOffset >= sectionTop - 150) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    const href = link.getAttribute('href');
+    if (href && href.includes(current) && current !== '') {
+      link.classList.add('active');
+    }
   });
 });

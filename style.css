@@ -65,6 +65,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--text-primary); }
+.nav-links a.active { color: var(--primary); font-weight: 700; }
 .nav-cta {
   padding: 10px 24px; border-radius: 12px; font-size: 14px; font-weight: 700;
   background: var(--primary); color: #fff !important;
@@ -241,7 +242,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .showcase-row.reverse { flex-direction: row-reverse; }
 .showcase-text { flex: 1; }
 .showcase-text h3 { font-size: 36px; font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; }
-.showcase-text p { font-size: 16px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px; }
+.showcase-text p { font-size: 18px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px; }
 .showcase-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .showcase-tag {
   padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 600;

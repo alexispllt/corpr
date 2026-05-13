@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Portfolios — Corpr</title>
+  <meta name="description" content="Track and optimize your wealth with smart portfolios on Corpr.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    /* Specific styles for detail pages */
+    .detail-page {
+      padding: 140px 48px 80px;
+      background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-secondary) 100%);
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .detail-hero-glow {
+      position: absolute; width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(10,132,255,0.1) 0%, transparent 70%);
+      top: 10%; right: -10%;
+      z-index: 1;
+    }
+    .detail-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+    .split-layout {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      text-align: left;
+    }
+    .text-column {
+      flex: 1.2;
+    }
+    .mockup-column {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
+    }
+    .mockup-container {
+      max-width: 400px; /* Make mockup smaller */
+      width: 100%;
+    }
+    .mockup-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .placeholder-mockup {
+      width: 100%;
+      height: 600px;
+      background: rgba(255,255,255,0.02);
+      border: 2px dashed rgba(255,255,255,0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-family: monospace;
+      font-size: 16px;
+      text-align: center;
+    }
+    .details-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .detail-item h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+    .detail-item p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    @media (max-width: 1024px) {
+      .split-layout { flex-direction: column; text-align: center; gap: 48px; }
+      .mockup-column { order: -1; } /* Mockup on top for mobile */
+      .details-list { text-align: left; }
+    }
+    @media (max-width: 768px) {
+      .detail-page { padding: 100px 24px 60px; }
+      .details-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav" id="navbar">
+    <a href="index.html" class="nav-logo">Corpr<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html#deep-analysis">Analysis</a>
+      <a href="index.html#learn-finance">Learn</a>
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="index.html#social">Social</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="#" class="nav-cta" onclick="return false;">Launching Soon</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#deep-analysis" onclick="closeMobile()">Analysis</a>
+    <a href="index.html#learn-finance" onclick="closeMobile()">Learn</a>
+    <a href="index.html#portfolio" onclick="closeMobile()">Portfolio</a>
+    <a href="index.html#social" onclick="closeMobile()">Social</a>
+    <a href="index.html#pricing" onclick="closeMobile()">Pricing</a>
+    <a href="#" class="nav-cta" onclick="closeMobile(); return false;">Launching Soon</a>
+  </div>
+
+  <!-- ======== CONTENT ======== -->
+  <main class="detail-page">
+    <div class="detail-hero-glow"></div>
+    <div class="detail-content">
+      <div class="split-layout">
+        
+        <!-- Text Side -->
+        <div class="text-column fade-up">
+          <h1 class="section-title">Smart Portfolios</h1>
+          <p class="section-subtitle">Track and optimize your wealth. Get a unified view of your investments with advanced scoring.</p>
+
+          <div class="details-list">
+            <div class="detail-item">
+              <h4>Unified View</h4>
+              <p>Bring all your investments together. Track performance, allocation, and diversification in one clean interface.</p>
+            </div>
+            <div class="detail-item">
+              <h4>Weighted Quality Scores</h4>
+              <p>Our algorithm calculates a quality score based on fundamentals. Know if your portfolio is high-quality or high-risk.</p>
+            </div>
+            <div class="detail-item">
+              <h4>Optimization Suggestions</h4>
+              <p>Get insights on how to improve. Identify over-concentration and find ways to rebalance.</p>
+            </div>
+            <div class="detail-item">
+              <h4>Historical Tracking</h4>
+              <p>See how your portfolio value and quality scores change over time. Measure growth.</p>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="detail-actions" style="margin-top: 40px; display: flex; gap: 16px;">
+            <a href="#" class="btn-primary" onclick="return false;">Launching Soon</a>
+            <a href="social.html" class="btn-secondary">Next: Social Community →</a>
+          </div>
+        </div>
+
+        <!-- Mockup Side -->
+        <div class="mockup-column fade-up">
+          <div class="mockup-container">
+            <img src="images/Mockup3.png" alt="Smart Portfolios View" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="placeholder-mockup" style="display:none;">
+              [ Grand Mockup: Smart Portfolios View ]
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Corpr<span>.</span></h3>
+        <p>Institutional-grade financial analysis, education, and portfolio management — all in one beautifully designed iOS app.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="index.html#deep-analysis">Analysis</a>
+        <a href="index.html#learn-finance">Learn</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#social">Social</a>
+        <a href="index.html#pricing">Pricing</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Corpr. An app by Alexis Pollet.</span>
+      <span>Made with ❤️ for investors</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
