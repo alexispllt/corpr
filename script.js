@@ -133,7 +133,7 @@ document.querySelectorAll('.course-card').forEach(card => {
 });
 
 // ---- Navbar Scroll Spy ----
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('#deep-analysis, #learn-finance, #portfolio, #social, #pricing');
 const navLinks = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
