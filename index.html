@@ -19,6 +19,7 @@
       <a href="#portfolio">Portfolio</a>
       <a href="#social">Social</a>
       <a href="#pricing">Pricing</a>
+      <a href="auth.html" id="nav-auth-btn">Log In</a>
       <a href="#" class="nav-cta" onclick="return false;">Launching Soon</a>
     </div>
     <button class="nav-hamburger" id="hamburger" aria-label="Menu">
@@ -33,6 +34,7 @@
     <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
     <a href="#social" onclick="closeMobile()">Social</a>
     <a href="#pricing" onclick="closeMobile()">Pricing</a>
+    <a href="auth.html" id="mob-auth-btn" onclick="closeMobile()">Log In</a>
     <a href="#" class="nav-cta" onclick="closeMobile(); return false;">Launching Soon</a>
   </div>
 
@@ -199,14 +201,14 @@
         <div class="pricing-card featured">
           <div class="pricing-badge">Most Popular</div>
           <div class="pricing-name">Premium</div>
-          <div class="pricing-price">$4.99 <span>/month</span></div>
+          <div class="pricing-price">$3.99 <span>/month</span></div>
           <div class="pricing-desc">For serious investors</div>
           <ul class="pricing-features">
             <li>Unlimited company analyses</li>
-            <li>All 12 dynamic KPI metrics</li>
-            <li>Deep AI analyst insights</li>
-            <li>Advanced portfolio scoring</li>
-            <li>Priority data access</li>
+            <li>Find better alternatives & compare stocks</li>
+            <li>Full access to hidden metrics</li>
+            <li>Unlimited portfolios & collections</li>
+            <li>Unlimited notification alerts</li>
             <li>Early access to new features</li>
           </ul>
           <button class="pricing-btn primary" onclick="return false;">Launching Soon</button>
@@ -262,5 +264,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script type="module" src="firebase-config.js"></script>
 </body>
 </html>
