@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["2B53XC42YQ.com.alexispollet.Corpr"],
+        "components": [
+          { "/": "/", "?": { "post": "?*" }, "comment": "A post shared from the app: corpr.fr/?post=<id>" },
+          { "/": "/", "?": { "portfolio": "?*" }, "comment": "A portfolio or collection shared from the app: corpr.fr/?portfolio=<id>" }
+        ]
+      }
+    ]
+  }
+}
