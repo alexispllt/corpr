@@ -1,0 +1,4 @@
+# GitHub Pages skips folders whose name starts with a dot. This one holds the file that lets
+# iOS open corpr.fr links (?post=… and ?portfolio=…) in the Corpr app.
+include:
+  - .well-known
